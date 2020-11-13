@@ -1,4 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.circle {
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.red {
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+.lime {
+  background-color: lime;
+}
+
+.title {
+  font-size: 36px !important;
+  text-transform: uppercase;
+  width: 150px;
+  text-align: center;
+  margin: 0 !important;
+}
