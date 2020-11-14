@@ -1,10 +1,11 @@
 .movie-detail {
-  display: flex;
   justify-content: center;
 }
 
 .movie-detail img {
   width: 20%;
+  min-width: 250px;
+  margin: 20px;
 }
 
 h2,
@@ -21,6 +22,14 @@ p {
 
 .movie-detail__text > * {
   margin-bottom: 20px;
+}
+
+.movie-detail__text .flex-row {
+  align-items: center;
+}
+
+.movie-detail__text .flex-column {
+  justify-content: center;
 }
 
 .movie-detail__text .first-row {
@@ -43,4 +52,15 @@ p {
   font-size: 48px;
   width: 48px;
   height: 48px;
+}
+
+@media only screen and (max-width: 480px) {
+  .movie-detail__text {
+    max-width: 100%;
+    padding: 1px;
+  }
+
+  .movie-detail__text .first-row {
+    justify-content: center;
+  }
 }

@@ -33,12 +33,10 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .flex-column {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
 }
