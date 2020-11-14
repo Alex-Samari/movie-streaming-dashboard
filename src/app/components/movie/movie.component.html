@@ -1,1 +1,13 @@
-<p>movie works!</p>
+<div class="main-container">
+	<div class="genre" *ngFor="let genre of genres">
+		<div class="genre__title">
+			<h2 class="genre__title--text">{{genre}}</h2>
+		</div>
+		<div class="carousel">
+			<div *ngFor="let movie of movies">
+				<img *ngIf="isGenreInMovie(movie, genre)" [src]="movie.backdrop" [alt]="movie.title">
+			</div>
+
+		</div>
+	</div>
+</div>

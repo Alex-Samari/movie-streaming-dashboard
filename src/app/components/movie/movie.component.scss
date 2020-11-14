@@ -1,0 +1,14 @@
+.genre__title--text {
+  text-transform: capitalize;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+.carousel img {
+  width: 250px;
+  margin: 5px;
+}
