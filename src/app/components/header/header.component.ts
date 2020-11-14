@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { MovieService } from 'src/app/services/movie.service';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +11,15 @@ import { FormControl } from '@angular/forms';
 export class HeaderComponent implements OnInit {
   movieSearch = new FormControl('');
 
-  constructor() {}
+  constructor(
+    private movieService: MovieService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {}
 
-  getMoviesByQuery = (searchQuery: string) => {
-    return null;
+  searchMovies = (searchQuery: string) => {
+    this.router.navigate(['./movies'], { queryParams: { searchQuery } });
   };
 }

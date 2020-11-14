@@ -5,6 +5,6 @@
 		<mat-icon matPrefix>search</mat-icon>
 		<mat-label>Search Movies</mat-label>
 		<input matInput placeholder="Search Movies" formControlName='movieSearch'
-			(keydown)='getMoviesByQuery(movieSearch.value)'>
+			(keyup.enter)='searchMovies($event.target.value)'>
 	</mat-form-field>
 </div>
