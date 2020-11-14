@@ -1,7 +1,32 @@
 <div class="main-container">
-	<div class="movie-detail">
-		<img src="" alt="">
-		<div class="movie-detail__text"></div>
-	</div>
+	<div class="movie-detail" *ngIf="selectedMovie">
+		<img [src]="selectedMovie.backdrop" [alt]="selectedMovie.title">
+		<div class="movie-detail__text">
+			<div class="flex-row first-row">
+				<h2>{{selectedMovie.title}} ({{selectedMovie.imdb_rating}}/10)</h2>
+				<div class="stars">
+					<mat-icon [ngClass]="{ 'stars--active': rating >= 1 }">grade</mat-icon>
+					<mat-icon [ngClass]="{ 'stars--active': rating >= 2  }">grade</mat-icon>
+					<mat-icon [ngClass]="{ 'stars--active': rating >= 3  }">grade</mat-icon>
+					<mat-icon [ngClass]="{ 'stars--active': rating >= 4 }">grade</mat-icon>
+					<mat-icon [ngClass]="{ 'stars--active': rating >= 5 }">grade</mat-icon>
+				</div>
+			</div>
+			<div class="flex-column second-row">
+				<div>
+					<h3>{{getYearFromDateString(selectedMovie.released_on)}} | {{selectedMovie.length}} |
+						{{selectedMovie.director}}</h3>
+				</div>
+				<div>
+					<h3>Cast: {{getCastString(selectedMovie.cast)}}</h3>
+				</div>
+			</div>
+			<div class="flex-row third-row">
+				<p>
+					<b>Movie Description: </b> {{selectedMovie.overview}}
+				</p>
+			</div>
 
+		</div>
+	</div>
 </div>

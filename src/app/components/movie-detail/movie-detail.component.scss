@@ -1,12 +1,46 @@
 .movie-detail {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .movie-detail img {
   width: 20%;
 }
 
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 .movie-detail__text {
   flex: 1;
+  padding: 0 40px;
+  max-width: 50%;
+}
+
+.movie-detail__text > * {
+  margin-bottom: 20px;
+}
+
+.movie-detail__text .first-row {
+  justify-content: space-between;
+}
+
+.movie-detail__text .second-row {
+  flex-direction: column;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars--active {
+  color: orange;
+}
+
+.stars mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
 }
