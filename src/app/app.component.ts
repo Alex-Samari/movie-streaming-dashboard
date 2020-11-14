@@ -8,5 +8,4 @@ import { FormControl } from '@angular/forms';
 })
 export class AppComponent {
   title = 'movie-streaming-dashboard';
-  constructor() {}
 }
