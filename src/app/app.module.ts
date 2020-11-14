@@ -8,9 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, MovieComponent, MovieDetailComponent],
+  declarations: [AppComponent, MovieComponent, MovieDetailComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
