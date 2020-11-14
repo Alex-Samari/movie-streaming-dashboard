@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Movie } from 'src/app/models/movie.model';
 import { MovieService } from 'src/app/services/movie.service';
 
@@ -11,7 +12,11 @@ export class MovieComponent implements OnInit {
   genres: Movie['genres'] = [];
   movies: Movie[] = [];
 
-  constructor(private movieService: MovieService) {
+  constructor(
+    private movieService: MovieService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {
     this.movieService.getMovies().subscribe((movies) => {
       this.movies = movies;
       // Get movie genres from the list of movies
@@ -42,5 +47,9 @@ export class MovieComponent implements OnInit {
     } else {
       return false;
     }
+  };
+
+  openMovieDetails = (movieId: Movie['id']) => {
+    this.router.navigate([movieId], { relativeTo: this.activatedRoute });
   };
 }

@@ -5,7 +5,8 @@
 		</div>
 		<div class="carousel">
 			<div *ngFor="let movie of movies">
-				<img *ngIf="isGenreInMovie(movie, genre)" [src]="movie.backdrop" [alt]="movie.title">
+				<img *ngIf="isGenreInMovie(movie, genre)" [src]="movie.backdrop" [alt]="movie.title"
+					(click)="openMovieDetails(movie.id)">
 			</div>
 
 		</div>
