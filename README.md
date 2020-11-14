@@ -1,6 +1,8 @@
 # MovieStreamingDashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1 as the Angular developer challenge for [SAVVYY](https://savvyy.ai/) in 2020.
+
+For detailed guide on how to complete the challenge on your own, please refer to the [Instructions](docs/instructions.md)
 
 ## Development server
 
