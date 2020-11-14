@@ -11,11 +11,7 @@ import { MovieService } from 'src/app/services/movie.service';
 export class HeaderComponent implements OnInit {
   movieSearch = new FormControl('');
 
-  constructor(
-    private movieService: MovieService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
