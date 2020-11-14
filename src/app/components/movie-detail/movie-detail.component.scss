@@ -1,0 +1,12 @@
+.movie-detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-detail img {
+  width: 20%;
+}
+
+.movie-detail__text {
+  flex: 1;
+}
